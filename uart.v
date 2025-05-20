@@ -1,3 +1,5 @@
+/* baud rate generator */
+
 module baud_gen #(parameter CLK_FREQ = 50000000, parameter BAUD_RATE = 9600)(
     input wire clk,
     input wire reset,
@@ -24,6 +26,7 @@ endmodule
 
 
 
+/* UART Transmitter module */
 
 module uart_tx (
     input wire clk, reset,
@@ -72,7 +75,7 @@ module uart_tx (
 endmodule
 
 
-
+/* UART Receiver module */
 
 module uart_rx (
     input wire clk, reset,
@@ -131,7 +134,7 @@ endmodule
 
 
 
-
+/* UART top(tb) module */
 
 module uart_top (
     input wire clk, reset,
